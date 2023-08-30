@@ -750,16 +750,16 @@
     p <- .addLegend(p, bbox, themeOptions)
   }
   # Add the OpenStreetMap licence to the plot ##################################
-  if (license) {
-    p <- p + shadowtext::geom_shadowtext(
-      data = data.frame(x = 0.97, y = 0.01, label = "Data by \u00A9 OpenStreetMap contributors"),
-      mapping = ggplot2::aes(x = x, y = y, label = label),
-      size = themeOptions[["font"]][["scale"]] * 9,
-      color = themeOptions[["colors"]][["text"]],
-      family = themeOptions[["font"]][["family"]],
-      bg.colour = if (!is.null(themeOptions[["colors"]][["textshadow"]])) themeOptions[["colors"]][["textshadow"]] else themeOptions[["colors"]][["background"]],
-      hjust = 1
-    )
+  # if (license) {
+    # p <- p + shadowtext::geom_shadowtext(
+     #  data = data.frame(x = 0.97, y = 0.01, label = "Data by \u00A9 OpenStreetMap contributors"),
+     #  mapping = ggplot2::aes(x = x, y = y, label = label),
+     #  size = themeOptions[["font"]][["scale"]] * 9,
+     #  color = themeOptions[["colors"]][["text"]],
+     #  family = themeOptions[["font"]][["family"]],
+     #  bg.colour = if (!is.null(themeOptions[["colors"]][["textshadow"]])) themeOptions[["colors"]][["textshadow"]] else themeOptions[["colors"]][["background"]],
+     #  hjust = 1
+   #  )
   }
   .tick(verbose, progBar, ticks, shiny)
   return(p)
