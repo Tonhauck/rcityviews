@@ -760,7 +760,7 @@
      #  bg.colour = if (!is.null(themeOptions[["colors"]][["textshadow"]])) themeOptions[["colors"]][["textshadow"]] else themeOptions[["colors"]][["background"]],
      #  hjust = 1
    #  )
-  }
+ # }
   .tick(verbose, progBar, ticks, shiny)
   return(p)
 }
